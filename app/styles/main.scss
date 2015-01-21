@@ -14,6 +14,20 @@
   Base Styles
 ******************************************************************************/
 
+html{
+	font-size:16px;
+	line-height: 1.35;
+	box-sizing:border-box;
+}
+
+*,
+*:before,
+*:after {
+}
+
+img{
+	max-width: 100%;
+}
 
 
 
@@ -21,12 +35,58 @@
   Layout Styles
 ******************************************************************************/
 
+.header-icon{
+	@include span-columns(3);
+	text-align: center;
+}
+.header-filler{
+	@include span-columns(6)
+}
+.header-signup{
+	@include span-columns(3);
+	text-align: center;
+}
+header{
+	color:white;
+}
 
-
+section.PageHeading{
+	padding-top:50%;
+	padding-bottom: 50%;
+	color:white;
+	font-family:$georgia;
+	position: relative;
+	text-align: center;
+	top: 50%;
+  	@include transform(translateY(-50%));
+}
 
 /*****************************************************************************
   Module Styles
 ******************************************************************************/
+@media screen and (max-width: 849px){
+	div.top-page{
+		background-image: url("/images/toronto-848x1080.jpg");
+		background-size: 100%;
+		background-repeat: no-repeat;
+	}
+}
+
+
+@media screen and (min-width: 850px) and (max-width: 1920px){
+	div.top-page{
+		background-image: url("/images/toronto-1920x1080.jpg");
+		/*background-size: 100%;*/
+		background-repeat: no-repeat;
+	}
+}
+
+@media screen and (min-width: 1921px) and (max-width: 2560px){
+	div.top-page{
+		background-image: url("/images/toronto-2560x2048.jpg");
+	}
+	
+}
 
 
 
