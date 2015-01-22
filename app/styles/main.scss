@@ -31,6 +31,8 @@ img{
 
 
 
+
+
 /*****************************************************************************
   Layout Styles
 ******************************************************************************/
@@ -40,54 +42,77 @@ img{
 	text-align: center;
 }
 .header-filler{
-	@include span-columns(6)
+	@include span-columns(6);
+	text-align: center;
 }
 .header-signup{
 	@include span-columns(3);
 	text-align: center;
 }
-header{
-	color:white;
+section.top-page{
+	//position:relative;
+	width: 100%;
+	//height: 100%;
+	padding-bottom: 5%;
+	overflow: hidden;
 }
 
-section.PageHeading{
+header.page-header{
+	color:white;
+	position:absolute;
+	top:0;
+	height: 60px;
+	width: 100%;
+	background-color: black;
+}
+
+article.lets-play{
 	padding-top:50%;
 	padding-bottom: 50%;
+	width: 100%;
+	height: 100%;
 	color:white;
+	box-sizing:border-box;
 	font-family:$georgia;
 	position: relative;
 	text-align: center;
 	top: 50%;
-  	@include transform(translateY(-50%));
+  	//@include transform(translateY(-50%));
 }
+
+
 
 /*****************************************************************************
   Module Styles
 ******************************************************************************/
 @media screen and (max-width: 849px){
-	div.top-page{
+	section.bg-img{
 		background-image: url("/images/toronto-848x1080.jpg");
-		background-size: 100%;
+		//background-size: 100%;
 		background-repeat: no-repeat;
+		padding-bottom: 3%;
+		height: 200%;
 	}
 }
 
 
-@media screen and (min-width: 850px) and (max-width: 1920px){
-	div.top-page{
+@media screen and (min-width: 850px) and (max-width: 1279px){
+	section.bg-img{
+		background-image: url("/images/toronto-1280x1024.jpg");
+		//background-size: 100%;
+		background-repeat: no-repeat;
+		padding-bottom: 3%;
+		height: 200%;
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	section.bg-img{
 		background-image: url("/images/toronto-1920x1080.jpg");
-		/*background-size: 100%;*/
+		//background-size: 100%;
 		background-repeat: no-repeat;
-	}
-}
-
-@media screen and (min-width: 1921px) and (max-width: 2560px){
-	div.top-page{
-		background-image: url("/images/toronto-2560x2048.jpg");
+		padding-bottom: 3%;
+		height: 200%;
 	}
 	
 }
-
-
-
-
