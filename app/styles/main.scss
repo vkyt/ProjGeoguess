@@ -67,17 +67,17 @@ header.page-header{
 }
 
 article.lets-play{
-	padding-top:50%;
-	padding-bottom: 50%;
+	padding-top:-43px;
 	width: 100%;
-	height: 100%;
+	height: 1080px;
 	color:white;
 	box-sizing:border-box;
 	font-family:$georgia;
-	position: relative;
+	position: fixed;
 	text-align: center;
 	top: 50%;
   	//@include transform(translateY(-50%));
+  	height: 86px;
 }
 
 
@@ -88,10 +88,10 @@ article.lets-play{
 @media screen and (max-width: 849px){
 	section.bg-img{
 		background-image: url("/images/toronto-848x1080.jpg");
-		//background-size: 100%;
+		background-size: cover;
 		background-repeat: no-repeat;
 		padding-bottom: 3%;
-		height: 200%;
+		height: 1080px;
 	}
 }
 
@@ -99,20 +99,20 @@ article.lets-play{
 @media screen and (min-width: 850px) and (max-width: 1279px){
 	section.bg-img{
 		background-image: url("/images/toronto-1280x1024.jpg");
-		//background-size: 100%;
+		background-size: cover;
 		background-repeat: no-repeat;
 		padding-bottom: 3%;
-		height: 200%;
+		height: 1024px;
 	}
 }
 
 @media screen and (min-width: 1280px) {
 	section.bg-img{
 		background-image: url("/images/toronto-1920x1080.jpg");
-		//background-size: 100%;
+		background-size: cover;
 		background-repeat: no-repeat;
 		padding-bottom: 3%;
-		height: 200%;
+		height: 1080px;
 	}
 	
 }
